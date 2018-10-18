@@ -1,18 +1,24 @@
-package com.nimtego.rumors
+package com.nimtego.rumors.presentation.base
 
-import android.support.v7.app.AppCompatActivity
+import android.app.ProgressDialog
 import android.os.Bundle
-import com.nimtego.rumors.presentation.contract.AlbumsCollectionContract
-import com.nimtego.rumors.presentation.contract.BaseContract
+import android.os.PersistableBundle
+import android.support.v7.app.AppCompatActivity
+import android.widget.ProgressBar
 
-class MainActivity : AppCompatActivity(), AlbumsCollectionContract.View {
-    override fun searchText(text: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+abstract class BaseView : AppCompatActivity(), BaseContract.View {
+
+    private var progressBar: ProgressBar? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initDI()
     }
 
-    override fun clearList() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    private fun initDI() {
+        TODO("need di")
     }
+
 
     override fun runOnMainThread(runnable: Runnable) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -40,10 +46,5 @@ class MainActivity : AppCompatActivity(), AlbumsCollectionContract.View {
 
     override fun supplyPresenter(): BaseContract.Presenter<BaseContract.View> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
     }
 }

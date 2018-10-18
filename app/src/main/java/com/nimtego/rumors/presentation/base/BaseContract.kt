@@ -1,11 +1,11 @@
-package com.nimtego.rumors.presentation.contract
+package com.nimtego.rumors.presentation.base
 
 interface BaseContract {
-    interface Presenter<V : View> {
+    interface Presenter<V : View, I : Interactor> {
 
-        val view: V
+        fun getView(): V?
 
-        fun attach(view: V)
+        fun attach(view: V?)
 
         fun detach()
     }
@@ -24,6 +24,9 @@ interface BaseContract {
 
         fun showView(view: Class<in View>)
 
-        fun supplyPresenter(): Presenter<View>
+        fun supplyPresenter(): Presenter<View, Interactor>
+    }
+    interface Interactor {
+        fun stub()
     }
 }

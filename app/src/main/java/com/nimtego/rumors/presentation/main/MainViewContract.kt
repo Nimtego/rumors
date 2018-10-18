@@ -1,7 +1,9 @@
-package com.nimtego.rumors.presentation.contract
+package com.nimtego.rumors.presentation.main
 
-interface AlbumsCollectionContract {
-    interface Presenter<V : View> : BaseContract.Presenter<V> {
+import com.nimtego.rumors.presentation.base.BaseContract
+
+interface MainViewContract {
+    interface Presenter<V : View, I : Interactor> : BaseContract.Presenter<V, I> {
 
         fun search()
 
@@ -14,14 +16,14 @@ interface AlbumsCollectionContract {
 
     interface View : BaseContract.View {
 
-        fun searchText(text: String)
+        fun searchText(): String
 
         fun clearList()
 
        // fun setSearchList(list: List<AlbumResult>)
     }
 
-    interface OnFinishedListener {
+    interface Interactor : BaseContract.Interactor{
 
       //  fun onFinished(albums: List<Album>)
         fun onFailure(t: Throwable)
