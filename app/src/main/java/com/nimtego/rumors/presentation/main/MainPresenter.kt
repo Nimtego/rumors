@@ -2,7 +2,7 @@ package com.nimtego.rumors.presentation.main
 
 import com.nimtego.rumors.presentation.base.BasePresenter
 
-class MainPresenter : BasePresenter<MainViewContract.View, MainViewContract.Interactor>(),
+class MainPresenter<T, U> : BasePresenter<MainViewContract.View, MainViewContract.Interactor>(),
         MainViewContract.Presenter<MainViewContract.View, MainViewContract.Interactor> {
 
     override fun search() {
