@@ -20,12 +20,15 @@ interface MainViewContract {
 
         fun clearList()
 
-       // fun setSearchList(list: List<AlbumResult>)
+        // fun setSearchList(list: List<AlbumResult>)
     }
 
-    interface Interactor : BaseContract.Interactor{
+    interface Interactor : BaseContract.Interactor {
 
-      //  fun onFinished(albums: List<Album>)
-        fun onFailure(t: Throwable)
+        fun listOfSongs(response: String, count: Int)
+
+        fun listOfAlbums(response: String, count: Int)
+
+        fun listOfAutors(response: String, count: Int)
     }
 }
