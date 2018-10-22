@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import butterknife.BindView
 import com.nimtego.rumors.R
+import com.nimtego.rumors.presentation.base.BaseContract
 import com.nimtego.rumors.presentation.base.BaseView
 
 class MainActivity : BaseView(), MainViewContract.View {
@@ -42,4 +43,5 @@ class MainActivity : BaseView(), MainViewContract.View {
     override fun clearList() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
 }

@@ -5,6 +5,8 @@ interface BaseContract {
 
         fun getView(): V?
 
+        fun getInteractor(): I?
+
         fun attach(view: V?)
 
         fun detach()
@@ -24,7 +26,7 @@ interface BaseContract {
 
         fun showView(view: Class<in View>)
 
-        fun supplyPresenter(): Presenter<View, Interactor>
+        /*fun supplyPresenter(): Presenter<View, Interactor>*/
     }
     interface Interactor {
         fun stub()

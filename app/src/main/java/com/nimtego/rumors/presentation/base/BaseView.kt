@@ -45,7 +45,4 @@ abstract class BaseView : AppCompatActivity(), BaseContract.View {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun supplyPresenter(): BaseContract.Presenter<BaseContract.View> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 }

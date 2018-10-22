@@ -4,8 +4,12 @@ import com.nimtego.rumors.presentation.base.BasePresenter
 
 class MainPresenter : BasePresenter<MainViewContract.View, MainViewContract.Interactor>(),
         MainViewContract.Presenter<MainViewContract.View, MainViewContract.Interactor> {
+
     override fun search() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val text = getView()?.searchText()
+        if (text != null) {
+            getInteractor()?.listOfSongs(text, 20)
+        }
     }
 
     override fun pushInRV(position: Int) {

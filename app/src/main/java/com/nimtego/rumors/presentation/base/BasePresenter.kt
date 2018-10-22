@@ -5,13 +5,13 @@ abstract class BasePresenter<V : BaseContract.View, I : BaseContract.Interactor>
     private var view: V? = null
     private var interactor: I? = null
 
-    override fun getView(): V? {
-        return view
-    }
+    override fun getView() = view
 
     override fun attach(view: V?) {
         this.view = view
     }
+
+    override fun getInteractor() = interactor
 
     override fun detach() {
         view = null
