@@ -1,11 +1,8 @@
 package com.nimtego.rumors.presentation.base
 
-import android.app.ProgressDialog
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
-import io.reactivex.observers.DefaultObserver
 
 abstract class BaseView : AppCompatActivity(), BaseContract.View {
 
