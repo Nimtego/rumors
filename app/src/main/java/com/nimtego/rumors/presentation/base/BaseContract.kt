@@ -1,5 +1,10 @@
 package com.nimtego.rumors.presentation.base
 
+import com.arellomobile.mvp.InjectViewState
+import com.arellomobile.mvp.MvpView
+import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+
 interface BaseContract {
     interface Presenter<V : View, I : Interactor> {
 
@@ -11,8 +16,8 @@ interface BaseContract {
 
         fun detach()
     }
-
-    interface View {
+    @StateStrategyType(AddToEndSingleStrategy::class)
+    interface View : MvpView {
 
         fun runOnMainThread(runnable: Runnable)
 
