@@ -1,10 +1,11 @@
 package com.nimtego.rumors.presentation.base
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.widget.ProgressBar
 
-abstract class BaseView : AppCompatActivity(), BaseContract.View {
+import android.widget.ProgressBar
+import com.arellomobile.mvp.MvpAppCompatActivity
+
+abstract class BaseView : MvpAppCompatActivity(), BaseContract.View {
 
     private var progressBar: ProgressBar? = null
 

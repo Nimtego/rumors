@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -44,6 +46,11 @@ dependencies {
     // RxJava2 Dependencies
     implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    //moxy
+    implementation 'com.arello-mobile:moxy:1.5.5'
+    implementation 'com.arello-mobile:moxy-app-compat:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
 
     //DI
     implementation 'com.google.dagger:dagger:2.16'
