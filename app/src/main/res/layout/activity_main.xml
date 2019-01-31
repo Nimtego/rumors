@@ -7,9 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".presentation.main.MainActivity">
 
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/tickerView"
+        android:layout_width="214dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:ticker_animationDuration="400"/>
+
     <EditText
         android:id="@+id/first"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +34,7 @@
 
     <EditText
         android:id="@+id/second"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:inputType="number"
@@ -42,8 +57,8 @@
 
     <ProgressBar
         android:id="@+id/pb"
-        android:layout_width="106dp"
-        android:layout_height="122dp"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -51,6 +66,7 @@
         app:layout_constraintBottom_toTopOf="@+id/first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291"/>
 
 </android.support.constraint.ConstraintLayout>
