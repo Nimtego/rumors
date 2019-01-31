@@ -12,6 +12,6 @@ interface MainView : MvpView {
 
     fun hideLoading()
 
-    fun toast(message: String)
+    fun message(message: String)
 
 }
