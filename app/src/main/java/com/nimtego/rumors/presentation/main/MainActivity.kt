@@ -1,6 +1,5 @@
 package com.nimtego.rumors.presentation.main
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -8,7 +7,6 @@ import android.widget.Toast
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.nimtego.rumors.R
-import com.nimtego.rumors.presentation.base.BaseContract
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MvpAppCompatActivity(), MainView {
