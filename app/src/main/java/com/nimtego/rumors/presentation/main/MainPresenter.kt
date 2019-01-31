@@ -5,5 +5,7 @@ import com.arellomobile.mvp.MvpPresenter
 
 @InjectViewState
 class MainPresenter : MvpPresenter<MainView>() {
-
+        fun summ (first: Int, second: Int) {
+            viewState.toast((first + second).toString())
+        }
 }
